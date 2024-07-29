@@ -65,22 +65,28 @@ int main(int argc, char *  argv[])
 	/*
 	 *	Use default if commandline arg not given
 	 */
-	if (velocity_above == NULL) {
+	if (velocity_above == NULL)
+	{
 		velocity_above = 10.0; /* m/s */
 	}
-	if (variance_v2 == NULL) {
+	if (variance_v2 == NULL)
+	{
 		variance_v2 = 0.5; /* m/s */
 	}
-	if (velocity_below == NULL) {
+	if (velocity_below == NULL)
+	{
 		velocity_below = 6.0; /* m/s */
 	}
-	if (variance_v1 == NULL) {
+	if (variance_v1 == NULL)
+	{
 		variance_v1 = 0.3; /* m/s */
 	}
-	if (airfoil_area == NULL) {
+	if (airfoil_area == NULL)
+	{
 		airfoil_area = 15.0; /* m^2 */
 	}
-	if (tolerance_for_area == NULL) {
+	if (tolerance_for_area == NULL)
+	{
 		tolerance_for_area = 0.01; /* m^2 */
 	}
 
