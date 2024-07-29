@@ -13,11 +13,11 @@ double calculate_lift(double v2, double v1, double rho, double A);
 int main(int argc, char *  argv[])
 {
 	
-	const double air_density = 1.225; /* kg/m^3, standard air density at sea level */
-	const double air_density_error = 0.085; /* 8.5% error range*/
-    double velocity_above, variance_v2;
-	double velocity_below, variance_v1;
-	double airfoil_area, tolerance_for_area;
+	const double air_density				= 1.225; /* kg/m^3, standard air density at sea level */
+	const double air_density_error			= 0.085; /* 8.5% error range*/
+    double velocity_above, variance_v2		= -1.0; // dummy initial values
+	double velocity_below, variance_v1		= -1.0; // dummy initial values
+	double airfoil_area, tolerance_for_area	= -1.0; // dummy initial values
 	int            c;
 
 	while ((c = getopt(argc, argv, "v:s:u:r:A:t:")) != -1)
@@ -63,27 +63,27 @@ int main(int argc, char *  argv[])
 	/*
 	 *	Use default if commandline arg not given
 	 */
-	if (velocity_above == NULL)
+	if (velocity_above <  0)
 	{
 		velocity_above = 10.0; /* m/s */
 	}
-	if (variance_v2 == NULL)
+	if (variance_v2 <  0)
 	{
 		variance_v2 = 0.5; /* m/s */
 	}
-	if (velocity_below == NULL)
+	if (velocity_below <  0)
 	{
 		velocity_below = 6.0; /* m/s */
 	}
-	if (variance_v1 == NULL)
+	if (variance_v1 <  0)
 	{
 		variance_v1 = 0.3; /* m/s */
 	}
-	if (airfoil_area == NULL)
+	if (airfoil_area <  0)
 	{
 		airfoil_area = 15.0; /* m^2 */
 	}
-	if (tolerance_for_area == NULL)
+	if (tolerance_for_area <  0)
 	{
 		tolerance_for_area = 0.01; /* m^2 */
 	}
