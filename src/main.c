@@ -13,11 +13,14 @@ double calculate_lift(double v2, double v1, double rho, double A);
 int main(int argc, char *  argv[])
 {
 	
-	const double air_density				= 1.225; /* kg/m^3, standard air density at sea level */
-	const double air_density_error			= 0.085; /* 8.5% error range*/
-    double velocity_above, variance_v2		= -1.0; // dummy initial values
-	double velocity_below, variance_v1		= -1.0; // dummy initial values
-	double airfoil_area, tolerance_for_area	= -1.0; // dummy initial values
+	const double air_density		= 1.225; /* kg/m^3, standard air density at sea level */
+	const double air_density_error	= 0.085; /* 8.5% error range*/
+    double velocity_above			= -1.0; // dummy initial values
+	double variance_v2				= -1.0; // dummy initial values
+	double velocity_below			= -1.0; // dummy initial values
+	double variance_v1				= -1.0; // dummy initial values
+	double airfoil_area				= -1.0; // dummy initial values
+	double tolerance_for_area		= -1.0; // dummy initial values
 	int            c;
 
 	while ((c = getopt(argc, argv, "v:s:u:r:A:t:")) != -1)
@@ -27,8 +30,6 @@ int main(int argc, char *  argv[])
 		case 'v':
 			
 			velocity_above = atof(optarg);
-			printf("*** quick print: %f \n", optarg); /////////////////////////////////////
-			printf("*** quick print: %f \n", atof(optarg)); /////////////////////////////////////
 			break;
 
 		case 's':
@@ -61,8 +62,6 @@ int main(int argc, char *  argv[])
 			exit(EXIT_FAILURE);
 		}
 	}
-
-	printf("quick print variance_v2: %f \n", variance_v2); /////////////////////////////////////
 
 	/*
 	 *	Use default if commandline arg not given
