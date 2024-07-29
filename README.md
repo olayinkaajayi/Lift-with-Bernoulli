@@ -37,9 +37,15 @@ The C program can take in the following commandline arguments:
 
 `-v`: velocity above airfoil
 
+`-s`: variance of $v_2$
+
 `-u`: velocity below airfoil
 
+`-r`: variance of $v_1$
+
 `-A`: area of airfoil
+
+`-t`: tolerance for airfoil area
 
 
 ## Reference
