@@ -27,6 +27,8 @@ int main(int argc, char *  argv[])
 		case 'v':
 			
 			velocity_above = atof(optarg);
+			printf("*** quick print: %f \n", optarg); /////////////////////////////////////
+			printf("*** quick print: %f \n", atof(optarg)); /////////////////////////////////////
 			break;
 
 		case 's':
