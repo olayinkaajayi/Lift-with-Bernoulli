@@ -60,6 +60,8 @@ int main(int argc, char *  argv[])
 		}
 	}
 
+	printf("quick print: %f \n") /////////////////////////////////////
+
 	/*
 	 *	Use default if commandline arg not given
 	 */
