@@ -27,7 +27,7 @@ $\qquad$ $v_1$ and $v_2$ is the velocity below and above the airfoil respectivel
 
 * We assume standard atmospheric conditions for temperature and pressure, and the `air density` is measured using the device described in [^0], which has a tolerance of $8.5\%$.
 
-* We assume that the `area` of the airfoil is designed by a manufacturer with an acceptable error margin of $0.01\mathrm{m}^2$.
+* We assume that the `area` of the airfoil designed by a manufacturer is $15\mathrm{m}^2$, and with an acceptable error margin of $0.01\mathrm{m}^2$.
 
 * We assume that the measured `velocity` above the airfoil $v_2$ follows a normal distribution with a mean of $10\mathrm{ms}^{-1}$ and variance of $0.5\mathrm{ms}^{-1}$, and the measurements for $v_1$ is also normally distributed with mean of $6\mathrm{ms}^{-1}$ and variance of $0.3\mathrm{ms}^{-1}$.
 
@@ -46,6 +46,8 @@ The C program can take in the following commandline arguments:
 `-A`: area of airfoil
 
 `-t`: tolerance for airfoil area
+
+In the absence of any commandline argument, the default values are used.
 
 
 ## Reference
