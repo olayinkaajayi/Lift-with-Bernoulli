@@ -62,7 +62,7 @@ int main(int argc, char *  argv[])
 		}
 	}
 
-	printf("quick print: %f \n", velocity_above); /////////////////////////////////////
+	printf("quick print variance_v2: %f \n", variance_v2); /////////////////////////////////////
 
 	/*
 	 *	Use default if commandline arg not given
