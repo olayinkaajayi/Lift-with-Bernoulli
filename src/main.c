@@ -21,6 +21,7 @@ int main(int argc, char *  argv[])
     double velocity_above, variance_v2;
 	double velocity_below, variance_v1;
 	double airfoil_area, tolerance_for_area;
+	int            c;
 
 	while ((c = getopt(argc, argv, "v:s:u:r:A:t:")) != -1)
 	{
