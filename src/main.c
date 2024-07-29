@@ -9,7 +9,7 @@
 double calculate_lift(double v2, double v1, double rho, double A)
 {
     double pressure_difference = 0.5 * rho * (pow(v2,2) - pow(v1,2));
-    double lift = pressure_difference * airfoil_area;
+    double lift = pressure_difference * A;
     return lift;
 }
 
